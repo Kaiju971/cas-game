@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar{
+    height: 6rem;
+    background-color: #B0EB65;;
+}
+.navbar ul .title{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width: 20%;
+    font-size: 1.4rem;
+   color: rgba (0,0,0,1);
+   letter-spacing: 1rem;
+   line-height: 1.5;
+
+
+   text-transform: uppercase;
+  background: linear-gradient(to bottom, black 0%, red 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* .navbar ul .title span{
+    color: rgba(255, 0, 0, 1);
+} */
+
+ul{
+    display: flex;
+    justify-content:space-between;
+    flex-direction:row;
+    align-items: center;   
+}
+  
+ ul .contact-link{
+    padding-right: 3rem;
+ }
