@@ -8,14 +8,35 @@ const round1HTML = document.querySelector(".round1");
 const round2HTML = document.querySelector(".round2");
 const global1HTML = document.querySelector(".global1");
 const global2HTML = document.querySelector(".global2");
+const hand = document.querySelector(".hand");
+
+
 const audio = new Audio("./sound/sound-dés.mp3");
 
 const buttonHand =  document.querySelector(".hand");
 buttonHand.addEventListener('click', event => {
- 	event.target.innerHTML = `✋`
-  	document.querySelector('.mic').style = `--drop: 60vh; --spin: 900deg`;
-	  changeJoueur();
-
+	event.preventDefault;
+	event.target.innerHTML = `✋`;
+	
+	document.querySelector(".dé").classList.remove("anim");
+	setTimeout(1000);
+	document.querySelector(".dé").classList.add("anim");
+	
+	document.querySelector(".dé").style.display = "inline-block";
+	document.querySelector(".dé").style.transform = "translate(0,200px) rotate(900deg)"; 
+	
+	
+	setTimeout(()=>{
+		event.target.innerHTML = `👊`;
+		
+		document.querySelector(".dé").style.display = "none";
+		document.querySelector(".dé").style.transform = ""; 
+		
+	},1000);
+	
+	
+	
+	changeJoueur();
 	console.log("joueur " + joueur);
 	if (fin) alert("partie finie, retenter votre chance!") 
  	else {
@@ -23,6 +44,12 @@ buttonHand.addEventListener('click', event => {
 		clickSurBouton(joueur);
 	}
   })
+
+//   function initLaMain(){
+// 	hand.innerHTML = `✋`;
+// 	dé.style = `--drop: 30vh; --spin: 900deg`;
+// 	dé.style.opacity="1";
+//   }
 
   function playAudio(){
 	audio.play();
@@ -102,6 +129,7 @@ function initialisation(){
 	round = [0,0]; 
 	joueur=1;
 	hold = false;	
+	fin = false;
 	global1HTML.innerHTML = "GLOBAL: " + global[0];
 	global2HTML.innerHTML = "GLOBAL: " + global[1];
 	round1HTML.innerHTML = "ROUND: " + round[0];
