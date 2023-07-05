@@ -2,11 +2,13 @@ let global = [0,0];
 let round = [0,0]; 
 let joueur=1;
 let hold = false;	
+let fin = false;
 
 const round1HTML = document.querySelector(".round1");
 const round2HTML = document.querySelector(".round2");
 const global1HTML = document.querySelector(".global1");
 const global2HTML = document.querySelector(".global2");
+const audio = new Audio("./sound/sound-dés.mp3");
 
 const buttonHand =  document.querySelector(".hand");
 buttonHand.addEventListener('click', event => {
@@ -15,15 +17,23 @@ buttonHand.addEventListener('click', event => {
 	  changeJoueur();
 
 	console.log("joueur " + joueur);
- 	clickSurBouton(joueur);
+	if (fin) alert("partie finie, retenter votre chance!") 
+ 	else {
+		// playAudio();
+		clickSurBouton(joueur);
+	}
   })
+
+  function playAudio(){
+	audio.play();
+ }
 
   const buttonHold =  document.querySelector(".hold");
   buttonHold.addEventListener("click",clickSurButtonHold );
 
 function clickSurButtonHold(){
-	hold = true;
-	if (round[joueur-1]===1 ) {
+	
+	if (round[joueur-1]===1 || hold) {
 		alert("ce n'est plus votre tour!");
 		return;
 	}else{
@@ -33,7 +43,7 @@ function clickSurButtonHold(){
 		console.log("fin de course");
 		round[joueur-1]=0;
 	}
-	
+	hold = true;
 	final();
 }
 
@@ -70,30 +80,56 @@ function changeJoueur(){
 
  function final(){
 	if(global[1]>0) {
-	 if(global[0]>=20)alert("joueur1 à gagné !");			
-		else if(global[1]>=20) alert("joueur2 à gagné !");
-	}		
+	 if(global[0]>=10 && !fin){
+		alert("joueur1 à gagné !");
+		fin=true;
+		// setTimeout(3000, initialisation());	
+	 }
+	 			
+		else if(global[1]>=10 && !fin){
+			alert("joueur2 à gagné !");
+			fin=true;
+			// setTimeout(3000, initialisation());	
+		}
+		 
+		
+	}	
+	
 }
+
+function initialisation(){
+	global = [0,0];
+	round = [0,0]; 
+	joueur=1;
+	hold = false;	
+	global1HTML.innerHTML = "GLOBAL: " + global[0];
+	global2HTML.innerHTML = "GLOBAL: " + global[1];
+	round1HTML.innerHTML = "ROUND: " + round[0];
+	round2HTML.innerHTML = "ROUND: " + round[1];
+}
+
+const buttonJouer =  document.querySelector(".init");
+buttonJouer.addEventListener("click",initialisation );
 
 
 // 		//Jouer la bande son//
 
-// 	const audio = new Audio("sound-dés.mp3");
+	// const audio = new Audio("sound-dés.mp3");
 	
 // 			//Quand la bande son est chargée, lancer le son
-// 	audio.addEventListener("canplaythrough",function(){
-// 		audio.play()
-// 	})
+	audio.addEventListener("canplaythrough",function(){
+		audio.play()
+ 	})
 
-// 	audio.addEventListener("ended",function(){
-// 			//Quand la bande son est finie, afficher l'image
+	audio.addEventListener("ended",function(){
+ 			//Quand la bande son est finie, afficher l'image
 
-// 			//Récupère l'image
-// 	const image = document.getElementById("images-dé")
+ 			//Récupère l'image
+ 	const image = document.getElementById(".dé")
 
-// 				//Ajouter l'attribut source avec le résultat
-// 	image.src = " imgages/dé" + resultat + ".png"
-// 		})
+ 				//Ajouter l'attribut source avec le résultat
+ 	image.src = " images/dé" + resultat + ".png"
+ 		})
 	
 
 
