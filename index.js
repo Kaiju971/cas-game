@@ -1,3 +1,5 @@
+// "use strict";
+
 let global = [0,0];
 let round = [0,0]; 
 let joueur=1;
@@ -8,51 +10,41 @@ const round1HTML = document.querySelector(".round1");
 const round2HTML = document.querySelector(".round2");
 const global1HTML = document.querySelector(".global1");
 const global2HTML = document.querySelector(".global2");
-const hand = document.querySelector(".hand");
+const buttonHand = document.querySelector(".hand");
 
 
-const audio = new Audio("./sound/sound-dés.mp3");
+// const audio = new Audio("./sound/sound-dés.mp3");
 
-const buttonHand =  document.querySelector(".hand");
+const element = document.querySelector(".dé");
 buttonHand.addEventListener('click', event => {
 	event.preventDefault;
-	event.target.innerHTML = `✋`;
+	buttonHand.innerHTML = `✋`;
 	
-	document.querySelector(".dé").classList.remove("anim");
-	setTimeout(1000);
-	document.querySelector(".dé").classList.add("anim");
-	
-	document.querySelector(".dé").style.display = "inline-block";
-	document.querySelector(".dé").style.transform = "translate(0,200px) rotate(900deg)"; 
-	
-	
+	element.classList.remove("anim");
+	void buttonHand.offsetWidth;
+	element.classList.add("anim");
+
 	setTimeout(()=>{
-		event.target.innerHTML = `👊`;
-		
-		document.querySelector(".dé").style.display = "none";
-		document.querySelector(".dé").style.transform = ""; 
-		
+		buttonHand.innerHTML = `👊`;
+		element.style.transform = ""; 
 	},1000);
-	
-	
 	
 	changeJoueur();
 	console.log("joueur " + joueur);
 	if (fin) alert("partie finie, retenter votre chance!") 
  	else {
-		// playAudio();
+		 playAudio();
 		clickSurBouton(joueur);
 	}
-  })
+  },false);
 
-//   function initLaMain(){
-// 	hand.innerHTML = `✋`;
-// 	dé.style = `--drop: 30vh; --spin: 900deg`;
-// 	dé.style.opacity="1";
-//   }
 
-  function playAudio(){
+function playAudio(){
+ 	var audio = new Audio("./sound/sound-dés.mp3");
+	audio.currentTime = 0 * 60; // nous commençons à la trentième minute
 	audio.play();
+	setTimeout(function(){audio.pause()}, 2000);//arrêt au bout de 30 secondes
+
  }
 
   const buttonHold =  document.querySelector(".hold");
@@ -110,13 +102,11 @@ function changeJoueur(){
 	 if(global[0]>=10 && !fin){
 		alert("joueur1 à gagné !");
 		fin=true;
-		// setTimeout(3000, initialisation());	
 	 }
 	 			
 		else if(global[1]>=10 && !fin){
 			alert("joueur2 à gagné !");
 			fin=true;
-			// setTimeout(3000, initialisation());	
 		}
 		 
 		
@@ -146,6 +136,7 @@ buttonJouer.addEventListener("click",initialisation );
 	
 // 			//Quand la bande son est chargée, lancer le son
 	audio.addEventListener("canplaythrough",function(){
+		
 		audio.play()
  	})
 
