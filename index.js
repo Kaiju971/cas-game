@@ -1,4 +1,5 @@
 // "use strict";
+import CircleType from 'circletype';
 
 let global = [0,0];
 let round = [0,0]; 
@@ -13,7 +14,11 @@ const global2HTML = document.querySelector(".global2");
 const buttonHand = document.querySelector(".hand");
 
 
-// const audio = new Audio("./sound/sound-dés.mp3");
+// Instantiate CircleType with an HTML element.
+const circleType = new CircleType(document.getElementById('text-party'));
+
+// Set the text radius and direction. Note: setter methods are chainable.
+circleType.radius(200).dir(-1);
 
 const element = document.querySelector(".dé");
 buttonHand.addEventListener('click', event => {
@@ -99,12 +104,12 @@ function changeJoueur(){
 
  function final(){
 	if(global[1]>0) {
-	 if(global[0]>=10 && !fin){
+	 if(global[0]>=100 && !fin){
 		alert("joueur1 à gagné !");
 		fin=true;
 	 }
 	 			
-		else if(global[1]>=10 && !fin){
+		else if(global[1]>=100 && !fin){
 			alert("joueur2 à gagné !");
 			fin=true;
 		}
