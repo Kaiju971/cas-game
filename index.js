@@ -1,5 +1,5 @@
 // "use strict";
-import CircleType from 'circletype';
+import CircleType from './node_modules/circletype/dist';
 
 let global = [0,0];
 let round = [0,0]; 
