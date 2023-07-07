@@ -8,16 +8,25 @@
 }
 
 body{
+    font-family: 'Alkatra', cursive;
     width: 100%;
     background-image: url(./images/bkg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  
+    color:whitesmoke;
     overflow-x: hidden;
+    
   }
 .navbar{
     height: 6rem;
-    background-color: #B0EB65;;
+    background-color: #B0EB65;
+    opacity: 0.90;
+}
+.footer{
+  height: 4rem;
+  background-color: #B0EB65;
+  opacity: 0.90; 
+  padding-bottom: 2rem;
 }
 .navbar ul .title{
     display:flex;
@@ -61,7 +70,11 @@ h1{
 	cursor: pointer;
 	transform: rotate(-38deg) translateX(-20%) translateY(1%);
 }
-
+.boxing{
+  display: inline-block;
+  transform: rotate(180deg) scaleY(-1); 
+ 
+}
 .dé {
   position: absolute;
   margin-top: 11rem;
@@ -111,6 +124,7 @@ button {
   border: 3px solid #ea8b19;
   border-radius: 8px;
   transition: all .3s ease-in-out;
+  font-family: 'Alkatra', cursive;
 }
 
 .star-1 {
@@ -332,11 +346,26 @@ padding-right: 3rem;
     text-align: center;
   } 
 
-.joueurs{
-    justify-self: start;
+.joueurs1{
+  justify-self: start;
+    border: solid 0.1px;
+background-color: rgb(7, 71, 7);
+    color:red;
+    
+  }
+
+  .joueurs2{
+    justify-self: end;
+    margin-right: 10rem;
+    border: solid 0.1px;
+    background-color: rgb(7, 71, 7);
+    color:red;
+    text-align: center;
+    width: 10rem;
   }
 
 .joueurs .col11{
+ 
     grid-column: 1;
     grid-row: 2;
     display: flex;
@@ -346,10 +375,11 @@ padding-right: 3rem;
   }
 
 .joueurs .col13{
+ 
     grid-column: 3;
     grid-row: 2;
     display: flex;
-    padding-left: 11rem;
+    padding-left: 1rem;
   }
 
 .table{

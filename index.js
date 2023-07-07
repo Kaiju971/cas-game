@@ -1,5 +1,5 @@
-// "use strict";
-import CircleType from './node_modules/circletype/dist';
+
+
 
 let global = [0,0];
 let round = [0,0]; 
@@ -13,12 +13,6 @@ const global1HTML = document.querySelector(".global1");
 const global2HTML = document.querySelector(".global2");
 const buttonHand = document.querySelector(".hand");
 
-
-// Instantiate CircleType with an HTML element.
-const circleType = new CircleType(document.getElementById('text-party'));
-
-// Set the text radius and direction. Note: setter methods are chainable.
-circleType.radius(200).dir(-1);
 
 const element = document.querySelector(".dé");
 buttonHand.addEventListener('click', event => {
