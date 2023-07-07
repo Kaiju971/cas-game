@@ -48,7 +48,9 @@ ul .contact-link{
 img .caroussel{
   background-image: 400px;
  }
-
+h1{
+  padding-top: 5rem;
+}
 .hand{
 	min-height: 100vh;
 	display: grid;
