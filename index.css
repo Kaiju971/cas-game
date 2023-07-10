@@ -823,4 +823,100 @@ background-color: rgb(7, 71, 7);
 .card4:hover .discord {
   fill: white;
 }
+
+@media (max-width: 560px) {
+  
+}
+
+@media (max-width: 560px) {
+  .navbar{
+    font-size: 4vw;
+    text-align: right;
+  }
+  .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-repeat: no-repeat; 
+    background-size: 100vh 100vw ;
+    background-size: cover;
+    display: grid;
+  }
+ 
+  .grid-container .col11{
+    -ms-text-size-adjust: center;
+  }
+  .grid-container .col12{
+    -ms-text-size-adjust: center;
+  }
+  .grid-container .col13{
+    -ms-text-size-adjust: center;
+  }
+  .navbar ul .title{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width: 20%;
+    font-size: 1.2rem;
+    color: blue;
+    letter-spacing: 1rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, black 0%, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hand{
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	font-size: 30vw;
+  position: absolute;
+  /* margin-top: -11rem; */
+	cursor: pointer;
+	transform: rotate(-38deg) translateX(-20%) translateY(1%);
+}
+.footer{
+  height: 4rem;
+  background-color: #B0EB65;
+  opacity: 0.90; 
+  padding-bottom: 3rem;
+}
+.joueurs .col11{
+ 
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 1rem;
+}
+
+.joueurs .col13{
+
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 1rem;
+}
+.joueurs1{
+    justify-self: center;
+    border: solid 0.1px;
+    background-color: rgb(7, 71, 7);
+    color:red;
+    
+  }
+
+  .joueurs2{
+    justify-self: center;
+    margin-right: 10rem;
+    border: solid 0.1px;
+    background-color: rgb(7, 71, 7);
+    color:red;
+    text-align: center;
+    width: 5rem;
+  }
+}
   

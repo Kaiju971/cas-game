@@ -226,3 +226,27 @@ body{
   .card4:hover .discord {
     fill: white;
   }
+  @media (max-width: 560px) {
+  
+  }
+
+  @media (max-width: 760px) {
+    .navbar{
+      font-size: 2vw;
+      text-align: right;
+    }
+    .grid-container{
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      background-repeat: no-repeat; 
+      background-size: 100vh 100vw ;
+      background-size: cover;
+      display: grid;
+    grid-template-rows: 50vh 50%;
+    }
+   
+    .grid-container .col11{
+      -ms-text-size-adjust: right;
+    }
+   
+  }

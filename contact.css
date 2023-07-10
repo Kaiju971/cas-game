@@ -224,4 +224,21 @@ form{
   .card4:hover .discord {
     fill: white;
   }
+  @media (max-width: 560px) {
+  
+  }
+
+  @media (max-width: 760px) {
+    .navbar .navbar-nav .nav-item .nav-link {
+      font-size: 4vw;
+      text-align: right;
+    }
+    .footer{
+      height: 1rem;
+      background-color: #B0EB65;
+      opacity: 0.90; 
+      padding-bottom: 6rem;
+    }
+    
+  }
     
