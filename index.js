@@ -12,6 +12,14 @@ const round2HTML = document.querySelector(".round2");
 const global1HTML = document.querySelector(".global1");
 const global2HTML = document.querySelector(".global2");
 const buttonHand = document.querySelector(".hand");
+const regles = document.querySelector(".regles");
+const reglesjeu = document.querySelector(".reglesjeu");
+
+regles.addEventListener('mouseenter',()=>{
+	reglesjeu.style.display = 'block';
+	setTimeout(()=>reglesjeu.style.display = 'none',30000);
+}		
+	);
 
 
 const element = document.querySelector(".dé");
@@ -134,20 +142,20 @@ buttonJouer.addEventListener("click",initialisation );
 	// const audio = new Audio("sound-dés.mp3");
 	
 // 			//Quand la bande son est chargée, lancer le son
-	audio.addEventListener("canplaythrough",function(){
+	// audio.addEventListener("canplaythrough",function(){
 		
-		audio.play()
- 	})
+	// 	audio.play()
+ 	// })
 
-	audio.addEventListener("ended",function(){
- 			//Quand la bande son est finie, afficher l'image
+	// audio.addEventListener("ended",function(){
+ 	// 		//Quand la bande son est finie, afficher l'image
 
- 			//Récupère l'image
- 	const image = document.getElementById(".dé")
+ 	// 		//Récupère l'image
+ 	// const image = document.getElementById(".dé")
 
- 				//Ajouter l'attribut source avec le résultat
- 	image.src = " images/dé" + resultat + ".png"
- 		})
+ 	// 			//Ajouter l'attribut source avec le résultat
+ 	// image.src = " images/dé" + resultat + ".png"
+ 	// 	})
 	
 
 
