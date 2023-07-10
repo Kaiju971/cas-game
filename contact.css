@@ -229,6 +229,10 @@ form{
   }
 
   @media (max-width: 760px) {
+    .navbar{
+      font-size: 4vw;
+      text-align: right;
+    }
     .navbar .navbar-nav .nav-item .nav-link {
       font-size: 4vw;
       text-align: right;
@@ -239,6 +243,13 @@ form{
       opacity: 0.90; 
       padding-bottom: 6rem;
     }
-    
+    .navbar ul .title{
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      width: 5%;
+      font-size: 1.2rem;
+  
+  }
   }
     
