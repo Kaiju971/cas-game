@@ -1,10 +1,10 @@
-
+//les déclarations "variable"//
 let global = [0,0];
 let round = [0,0]; 
 let joueur=1;
 let hold = false;	
 let fin = false;
-
+//les déclarations  "des constantes"//
 const round1HTML = document.querySelector(".round1");
 const round2HTML = document.querySelector(".round2");
 const global1HTML = document.querySelector(".global1");
@@ -21,12 +21,12 @@ menuBtn.addEventListener("click", function () {
   menu.classList.toggle("active");
 });
 
-
+//Pour l'éxécution des règles du jeu avec un timer remplace hover/CSS //
 regles.addEventListener('mouseenter',()=>{
 	reglesjeu.style.display = 'block';
 	setTimeout(()=>reglesjeu.style.display = 'none',30000);
 });
-
+//Executer le lancer de dé lors du clic//
 const element = document.querySelector(".dé");
 buttonHand.addEventListener('click', event => {
 	event.preventDefault;
@@ -35,7 +35,7 @@ buttonHand.addEventListener('click', event => {
 	element.classList.remove("anim");
 	void buttonHand.offsetWidth;
 	element.classList.add("anim");
-
+//Quand la bande son est chargée, lancer le son//
 	setTimeout(()=>{
 		buttonHand.innerHTML = `👊`;
 		element.style.transform = ""; 
@@ -49,7 +49,7 @@ buttonHand.addEventListener('click', event => {
 	}
 	},false);
 
-
+//Jouer la bande son//
 function playAudio(){
 		var audio = new Audio("./sound/sound-dés.mp3");
 	audio.currentTime = 0 * 60; // nous commençons à la trentième minute
@@ -136,43 +136,3 @@ function changeJoueur(){
 
 const buttonJouer =  document.querySelector(".init");
 buttonJouer.addEventListener("click",initialisation );
-
-
-
-
-// 		//Jouer la bande son//
-
-	// const audio = new Audio("sound-dés.mp3");
-	
-// 			//Quand la bande son est chargée, lancer le son
-	// audio.addEventListener("canplaythrough",function(){
-		
-	// 	audio.play()
- 	// })
-
-	// audio.addEventListener("ended",function(){
- 	// 		//Quand la bande son est finie, afficher l'image
-
- 	// 		//Récupère l'image
- 	// const image = document.getElementById(".dé")
-
- 	// 			//Ajouter l'attribut source avec le résultat
- 	// image.src = " images/dé" + resultat + ".png"
- 	// 	})
-	
-
-
-// // 			//Récupérer le bouton
-// // 	const buttonLancer = document.getElementById("hand")
-
-// // 	/*Executer le lancer de dé lors du clic*/
-// // buttonLancer.addEventListener("click",clickSurBouton)
-
-
-
-
-
-
-
-
-	

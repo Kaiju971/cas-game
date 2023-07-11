@@ -1,26 +1,34 @@
-const titre = document.querySelector('#titre')
 const form = document.querySelector("#form");
 const pseudo = document.querySelector("#pseudo");
 const email = document.querySelector("#email");
-const checkbox = document.querySelector('checkbox')
-const requête = document.querySelector("#requête");
-const messageInput = document.querySelector("#message");
-console.log("messageInput "+messageInput);
-const output = document.querySelector("#output");
+const messageInput = document.querySelector("#requête");
 
-const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
+let ok = true;
 
-function testInfo(messageInput) {
-  const ok = re.exec(messageInput.value);
+var EMAIL_REGEXP =
+  /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-  output.textContent = ok
-    ? alert(`Merci, votre message est ${ok[0]}`)
-    : alert(`${messageInput.value} information incomplète!`);
+function testInfo() {
+  const okEmail = EMAIL_REGEXP.exec(email.value);
+
+  if (pseudo.value === "") {
+    ok = false;
+    alert( "information incomplète à pseudo!");
+  }
+  if (messageInput.value === "") {
+    ok = false;
+    alert( "information incomplète à message!");
+  }
+
+  if (!okEmail) {
+    ok = false;
+    alert(`${email.value} information incomplète à email!`);
+  }
+
+  ok ? alert(`Merci, votre message est ${messageInput.value}`) : "";
 }
 
 form.addEventListener("submit", (event) => {
-   
-
   event.preventDefault();
   testInfo(messageInput);
 });

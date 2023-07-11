@@ -54,19 +54,17 @@
         </div>
         <div class="menu">
          
-            <div>
-              <li class="Jeu">
-                <a href="./index.html">Jeu de dé</a> 
-              </li>
-              <li class="contact">
-                <a href="./contact.html">Contact</a>
-              </li>
-            </div>
-            
-            <!-- <br />
-            <br />
-            <br />
-            <br /> -->
+          <div>
+            <li class="Home">
+              <a href="./accueil.html">Accueil</a>
+            </li>
+            <li class="Jeu">
+              <a href="./index.html">Jeu de dé</a>
+            </li>
+            <li class="contact">
+              <a href="./contact.html">Contact</a>
+            </li>
+          </div>
 
           <div class="social-links">
             <div class="social-links d-flex justify-content-center">
@@ -92,44 +90,60 @@
       </div>
     </nav>    
 </header>
-<form>
-    <h1>Contact</h1>
-    <div class="p-3 m-0 border-0 sel">
-      <label for="my selection" class="form-label">Votre demande concerne</label>
-      <select class="form-select" aria-label="my selection">
-        <option selected="">--Sélectionner Jeu--</option>
-        <option value="1">dé</option>
-        <option value="2">chifoumi</option>
-        <option value="3">Autre</option>
-      </select>
+<form id="form">
+  <h1>Contact</h1>
+  <div class="p-3 m-0 border-0 sel">
+    <label for="my selection" class="form-label"
+      >Votre demande concerne</label
+    >
+    <select class="form-select" aria-label="my selection">
+      <option selected="">--Sélectionner Jeu--</option>
+      <option value="1">dé</option>
+      <option value="2">chifoumi</option>
+      <option value="3">Autre</option>
+    </select>
+  </div>
+  <div class="p-3 m-0 border-0 sel">
+    <label for="my selection titre" class="form-label">Civilité</label>
+    <select class="form-select" aria-label="my selection titre">
+      <option selected="">--Sélectionner--</option>
+      <option value="1">Monsieur</option>
+      <option value="2">Madame</option>
+    </select>
+  </div>
+  <div class="p-3 mb-3">
+    <label for="pseudo" class="form-label">Pseudo</label>
+    <input
+      type="pseudo"
+      class="form-control"
+      id="pseudo"
+      aria-describedby="pseudo"
+    />
+  </div>
+  <div class="p-3 mb-3">
+    <label for="email" class="form-label">adresse mail</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      aria-describedby="emailHelp"
+    />
+    <div id="emailHelp" class="form-text">
+      Votre adresse ne sera pas partagé à des fins commercial
     </div>
-    <div class="p-3 m-0 border-0 sel">
-      <label for="my selection titre" class="form-label">Civilité</label>
-      <select class="form-select" aria-label="my selection titre">
-        <option selected="">--Sélectionner--</option>
-        <option value="1">Monsieur</option>
-        <option value="2">Madame</option>
-      </select>
-    </div>
-    <div class="p-3 mb-3">
-      <label for="pseudo" class="form-label">Pseudo</label>
-      <input type="pseudo" class="form-control" id="pseudo" aria-describedby="pseudo">
-    </div>
-    <div class="p-3 mb-3">
-      <label for="exampleInputEmail1" class="form-label">adresse mail</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">Votre adresse ne sera pas partagé à des fins commercial</div>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">se souvenir de moi</label>
-    </div>
-    <div class="mb-3">
-      <label for="requête" class="form-label">Requête</label>
-      <textarea class="form-control" id="Requête" rows="5"></textarea>
-    </div>
-    <button type="submit" class="btn btn-danger">Submit</button>
-    <p id="output"></p>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="checkbox" />
+    <label class="form-check-label" for="checkbox"
+      >se souvenir de moi</label
+    >
+  </div>
+  <div class="mb-3">
+    <label for="requête" class="form-label">Requête</label>
+    <textarea class="form-control" id="requête" rows="5"></textarea>
+  </div>
+  <button type="submit" class="btn btn-danger">Submit</button>
+  <p id="output"></p>
 </form>
 
 <div class="social">
@@ -162,4 +176,5 @@
 </footer>
 </body>
 <script type="module" src="./index.js"></script>
+<script type="module" src="./contact.js"></script>
 </html>

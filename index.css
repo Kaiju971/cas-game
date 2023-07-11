@@ -37,8 +37,7 @@ body{
 .footer{
   height: 6rem;
   background-color: #B0EB65;
-  opacity: 0.90; 
-  /* padding-bottom: 2rem; */
+  opacity: 0.90;
 }
 .navbar ul .title{
     display:flex;
@@ -744,7 +743,6 @@ padding-right: 3rem;
 }
 
 .instagram {
-  /* margin-top:0em; */
   fill: #cc39a4;
   position: absolute;
   text-align: center;
@@ -783,8 +781,7 @@ padding-right: 3rem;
 }
 
 .github {
-   margin-top: -0.4em;
-  /*margin-left: -0.1em; */
+  margin-top: -0.4em;
   position: absolute;
   text-align: center;
 }
@@ -940,93 +937,92 @@ padding-right: 3rem;
   }
  
   .grid-container .col11{
-    grid-column: 1/span 3;
-    -ms-text-size-adjust: center;
+      grid-column: 1/span 3;
+      -ms-text-size-adjust: center;
   }
   .grid-container .col12{
-    grid-column: 1/span 3;
-    -ms-text-size-adjust: center;
+      grid-column: 1/span 3;
+      -ms-text-size-adjust: center;
   }
   .grid-container .col13{
-    grid-column: 1/span 3;
-    -ms-text-size-adjust: center;
+      grid-column: 1/span 3;
+      -ms-text-size-adjust: center;
   }
 
-.navbar ul li a, .regles{
- font-size: 4vw;
- display: none;
-}
-
-.navbar ul .title{
-  font-size: 3vw;
-  width: 100%;
-}
-
-.navbar ul li .logo{
-  display:block;
-}
-.vide{
-  display: none;
-}
-
-.hand{
-	min-height: 100vh;
-	display: grid;
-	place-items: center;
-	font-size: 30vw;
-  position: absolute;
-  /* margin-top: -11rem; */
-	cursor: pointer;
-	transform: rotate(-38deg) translateX(-20%) translateY(1%);
-}
-
-button{
-  grid-row: 4;
-  max-width: 5vw;
-  text-align: center;
-  justify-self: center;
-}
-
-.joueurs .col11{
- 
-  grid-column: 1;
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-left: 1rem;
-}
-
-.joueurs .col13{
-  grid-column: 1;
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-left: 1rem;
-}
-.joueurs1{
-  grid-row: 4;
-  justify-self: center;
-  width: 5rem; 
-  margin-left: 0rem;
+  .navbar ul li a, .regles{
+      font-size: 4vw;
+      display: none;
   }
 
-.joueurs2{
-  grid-row: 4;
-  justify-self: center;
-  margin-right: 0rem; 
-  width: 5rem; 
-}
+  .navbar ul .title{
+      font-size: 3vw;
+      width: 100%;
+  }
 
-.menu-btn span {
-  background-color: rgb(7, 65, 4);
-}
-.menu {
-  width: 100%;
-}
-.menu ul {
-  display: block;
-}
+  .navbar ul li .logo{
+      display:block;
+  }
+  .vide{
+      display: none;
+  }
+
+  .hand{
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-size: 30vw;
+      position: absolute;
+      cursor: pointer;
+      transform: rotate(-38deg) translateX(-20%) translateY(1%);
+  }
+
+  button{
+      grid-row: 4;
+      max-width: 5vw;
+      text-align: center;
+      justify-self: center;
+  }
+
+  .joueurs .col11{
+  
+      grid-column: 1;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-left: 1rem;
+  }
+
+  .joueurs .col13{
+      grid-column: 1;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-left: 1rem;
+  }
+  .joueurs1{
+      grid-row: 4;
+      justify-self: center;
+      width: 5rem; 
+      margin-left: 0rem;
+  }
+
+  .joueurs2{
+      grid-row: 4;
+      justify-self: center;
+      margin-right: 0rem; 
+      width: 5rem; 
+  }
+
+  .menu-btn span {
+     background-color: rgb(7, 65, 4);
+  }
+  .menu {
+      width: 100%;
+  }
+  .menu ul {
+      display: block;
+  }
 }
   
