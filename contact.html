@@ -10,19 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f6b2d7d8bd.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<header>
+  <header>
     <nav class="navbar">
-
         <ul>
-            <li class="logo">
-                <a href ='./accueil.html'>
-                    <img src="./images/logo.gif"    type="video/mp4" width="95" height="95" alt="logo">
-                  </a>
-            </li>
-            <li></li>
-            <li></li>
+            <div class="logo">
+              <a href ='./accueil.html'>
+                <img src="./images/logo.gif"    type="video/mp4" width="95" height="95" alt="logo">
+              </a>
+            </div>
+            <li class="vide"></li>
+            <li class="vide"></li>
             <li class="title">CASINO <span>ASSOFAC</span></li>
             <li class="regles"> 
              Règle du jeu           
@@ -38,24 +39,67 @@
         <div class="flex-reglesjeu">
           <div></div>
           <div></div>
-          <div class="reglesjeu">
-            <p>Voici les règles du jeu : Le jeu comprend 2 joueurs sur un seul et même écran. Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL). À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au ROUND. Lors de son tour, le joueur peut décider à tout moment de: </p>
-          <p>Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le tour de l’autre joueur.</p>
-          <p>Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.</p>
-          <p>Le premier joueur qui atteint les 100 points sur global gagne le jeu.</p>
-          <p>Bonne chance!</p>
+            <div class="reglesjeu">
+                <p>Voici les règles du jeu : Le jeu comprend 2 joueurs sur un seul et même écran. Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL). À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au ROUND. Lors de son tour, le joueur peut décider à tout moment de: </p>
+                <p>Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le tour de l’autre joueur.</p>
+                <p>Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.</p>
+                <p>Le premier joueur qui atteint les 100 points sur global gagne le jeu.</p>
+                <p>Bonne chance!</p>
             </div>
         </div>
-    </nav>
+        <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu">
+         
+            <div>
+              <li class="Jeu">
+                <a href="./index.html">Jeu de dé</a> 
+              </li>
+              <li class="contact">
+                <a href="./contact.html">Contact</a>
+              </li>
+            </div>
+            
+            <!-- <br />
+            <br />
+            <br />
+            <br /> -->
+
+          <div class="social-links">
+            <div class="social-links d-flex justify-content-center">
+              <a href = "#"
+                target="_blank" title = "Twitch">
+                <i class = "fab fa-twitch" style='padding-right: 4vw;color: blueviolet;'></i>  
+              </a>
+              <a href = "#"
+                target="_blank" title = "You tube">
+                <i class = "fab fa-youtube" style='padding-right: 4vw;color: red;'></i>  
+              </a>
+              <a href = "#"
+                target="_blank" title = "Twitter">
+                <i class = "fa-brands fa-twitter" style='padding-right: 4vw;color:cornflowerblue;'></i>  
+              </a>
+              <a href = "#"
+                target="_blank" title = "Mail">
+                <i class = "fa fa-envelope"; style="padding-right: 4vw; color: white;" ></i>  
+              </a>
+              </div>
+          </div>
+         
+      </div>
+    </nav>    
 </header>
 <form>
     <h1>Contact</h1>
     <div class="p-3 m-0 border-0 sel">
       <label for="my selection" class="form-label">Votre demande concerne</label>
       <select class="form-select" aria-label="my selection">
-        <option selected="">--Sélectionner--</option>
-        <option value="1">Jeux</option>
-        <option value="2">Consoles</option>
+        <option selected="">--Sélectionner Jeu--</option>
+        <option value="1">dé</option>
+        <option value="2">chifoumi</option>
         <option value="3">Autre</option>
       </select>
     </div>
@@ -85,7 +129,7 @@
       <textarea class="form-control" id="Requête" rows="5"></textarea>
     </div>
     <button type="submit" class="btn btn-danger">Submit</button>
-  
+    <p id="output"></p>
 </form>
 
 <div class="social">

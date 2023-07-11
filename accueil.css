@@ -25,7 +25,9 @@ body{
 .navbar ul li a{
   color:white;
   padding-right: 2vw;
+  font-size: 1.2vw;
 }
+
 .enter{
     margin-bottom: -1rem;
 }
@@ -65,6 +67,11 @@ body{
     display: none;
     z-index: 100;
   }
+
+  .regles{
+    font-size: 1.2vw;
+  }
+
   .grid-container{
     padding-top: 10%;
     padding-bottom: 5%;
@@ -226,9 +233,80 @@ body{
   .card4:hover .discord {
     fill: white;
   }
-  @media (max-width: 560px) {
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
   
+    padding-right: 5vw;
   }
+  
+  .menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: all 0.5s;
+  }
+  
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 10px);
+  }
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 10px);
+  }
+  
+  .menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    padding: 15px;
+    background: #B0EB65;
+    opacity: 0.8;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .menu.active {
+    transform: translateX(0);
+  }
+  
+  .menu li {
+    list-style-type: none;
+    color: white;
+  }
+  
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2;
+  }
+  
 
   @media (max-width: 760px) {
     .navbar{
@@ -260,5 +338,10 @@ body{
     .grid-container .col11{
       -ms-text-size-adjust: right;
     }
-   
+    .navbar ul .title{
+      display:none;
+  }
+  .navbar ul li a, .regles{
+    font-size: 4vw;
+   }
   }
