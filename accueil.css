@@ -68,11 +68,10 @@ body {
   color: #000;
   width: 200px;
   border: 2px solid #000000;
-  padding: 10px;
+  padding-top: 43em;
   font-size: 16px;
   display: none;
   z-index: 100;
-  font-size: 1.2vw;
 }
 
 .regles {
@@ -366,4 +365,5 @@ ul .contact-link {
   .menu ul {
     display: block;
   }
+  
 }
