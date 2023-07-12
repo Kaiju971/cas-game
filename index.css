@@ -1027,5 +1027,9 @@ padding-right: 3rem;
   .menu ul {
       display: block;
   }
+
+  .social{
+   display: none;
+  }
 }
   
